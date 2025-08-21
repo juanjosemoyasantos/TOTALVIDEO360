@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventos Creativos - Especializados en crear experiencias únicas para todo tipo de eventos">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styles_index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav aria-label="Navegación principal">
+                <div class="logo">Totalvideo360</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./galeria.html">Galería</a></li>
+                    <li class="dropdown">
+                        <button aria-expanded="false" aria-controls="servicios-dropdown">
+                            Servicios <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul id="servicios-dropdown" class="dropdown-content">
+                            <li><a href="#"><i class="fas fa-camera-retro" aria-hidden="true"></i> Photobooth 360°</a></li>
+                            <li><a href="#"><i class="fas fa-sparkles" aria-hidden="true"></i> Glitter Bar</a></li>
+                            <li><a href="#"><i class="fas fa-box-open" aria-hidden="true"></i> Alquiler</a></li>
+                            <li><a href="#"><i class="fas fa-font" aria-hidden="true"></i> Letras de Corcho</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./presupuesto.html">Presupuesto</a></li>
+                    <li><a href="./contacto.html" class=active>Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contacto">
+        <h1>Contacto</h1>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-text">
+                        <h3>Dirección</h3>
+                        <p>Calle Ficticia 123, 28001<br>Madrid, España</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="info-text">
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+34612345678">+34 612 345 678</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@totalvideo360.com">info@totalvideo360.com</a></p>
+                    </div>
+                </div>
+
+                <div class="business-hours">
+                    <h3>Horario de Atención</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Lunes - Viernes</td>
+                            <td>9:00 - 14:00 / 16:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábados</td>
+                            <td>10:00 - 14:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingos</td>
+                            <td>Cerrado</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <h2>Calculadora de Ruta</h2>
+                <div class="input-group">
+                    <label for="business-address">Ubicación del Negocio:</label>
+                    <input type="text" id="business-address" value="Calle Principal 123, Ciudad" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="client-address">Ubicación del Cliente:</label>
+                    <input type="text" id="client-address" placeholder="Ingresa tu dirección">
+                </div>
+                <button id="calculate-route">Calcular Ruta</button>
+                <div id="route-info"></div>
+            </div>
+            <div id="map"></div>
+        </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Redes Sociales -->
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/totalvideo360" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/totalvideo360" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@totalvideo360" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dirección -->
+                <div class="footer-address">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Ficticia 123, Madrid, España</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+34612345678">+34 612 345 678</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@totalvideo360.com">info@totalvideo360.com</a></p>
+                </div>
+
+                <!-- Aviso Legal -->
+                <div class="footer-legal">
+                    <h3>Legal</h3>
+                    <p>&copy; 2025 Totalvideo360. Todos los derechos reservados.</p>
+                    <p>
+                        <a href="./aviso-legal">Aviso Legal</a> | 
+                        <a href="./politica-privacidad">Política de Privacidad</a> | 
+                        <a href="./cookies">Cookies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/menu-toggle.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="/js/map.js"></script>
+</body>
+</html>

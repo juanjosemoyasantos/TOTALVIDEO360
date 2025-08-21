@@ -1,0 +1,1 @@
+wpShowReviews(259039, "red");
